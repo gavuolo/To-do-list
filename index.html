@@ -9,33 +9,26 @@
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-    <header>
 
-    <div class="bar">
-        <div class="top-bar">         
-            <h1>Lista de tarefas</h1>
-            
+    <header>
+        <div class="bar">
+            <div class="top-bar">         
+                <h1>Lista de tarefas</h1>
+                <ion-icon onclick="completarTodos()" name="checkmark-done-circle-sharp"></ion-icon>
+            </div>
         </div>
-    </div>
 
     </header>
    
-    <div class="add-list">
-        <input type="text" placeholder="Insira aqui sua tarefa">
-        <div class="add"><ion-icon onclick="addTarefa()" name="add-outline"></ion-icon></div>
-    </div>
-    <div class="all-list">
-        
-        <ul>
-
-            <!--inserido a lista <li>
-             <div class="list">
-            <li>${novaTarefa}</li>
-            <span><ion-icon onclick="deletarTarefa" name="trash-outline"></ion-icon></span>
-            </div>-->
-        </ul>
-        
-    </div>
+    <main>
+        <div class="add-list">
+            <input type="text" placeholder="Insira aqui sua tarefa">
+            <div class="add"><ion-icon onclick="addTarefa()" name="add-outline"></ion-icon></div>
+        </div>
+        <div class="all-list">
+            <ul></ul>    
+        </div>
+    </main>
 
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script.js"></script>

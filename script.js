@@ -1,4 +1,4 @@
-let tarefas = JSON.parse(localStorage.getItem('chaveTarefas'))
+let tarefas = JSON.parse(localStorage.getItem('chaveTarefas')) || []
 
 mostrarTarefa()
 //LocalStorage

@@ -58,26 +58,29 @@ function deletarTarefa(div){
         totalTarefas()
         salvarLocalStorage()
     }
-
 }
 
 //Adicionar o efeito de "tarefa completada"
 function completarTarefa(div){
     div.parentNode.classList.toggle('complete')
-    div.innerHTML
-
-   tarefasConcluidas.push(div.innerHTML)
-   console.log(div.innerHTML)
-   salvarLocalStorage()
+    salvarLocalStorage()
 }
 
 //Botão de completar todas as tarefas
 function completarTodos(){
     let lista = document.querySelectorAll('.list')
+    for(let i = 0; i < lista.length; i++){
+        lista[i].classList.add('complete')
+    }
+}
+
+//Botão deletar todas as tarefas
+function deletarTodas(){
+    let lista = document.querySelectorAll('.list')
     console.log(lista)
-    
-    for (let i = 0; i < lista.lenght; i++){
-        console.log(lista[i])
-        lista[i].classList.add('complete');
+    for(let i = 0; i < lista.length; i++){
+        lista[i].remove()
+        tarefas.pop([i])
+        salvarLocalStorage()
     }
 }

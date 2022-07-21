@@ -52,10 +52,13 @@ function addTarefa() {
 
 //Deletar a tarefa
 function deletarTarefa(div){
-    div.parentNode.parentNode.remove()
-    tarefas.splice(div, 1)
-    totalTarefas()
-    salvarLocalStorage()
+    if(window.confirm("Você quer mesmo deletar esta terafa?")){
+        div.parentNode.parentNode.remove()
+        tarefas.splice(div, 1)
+        totalTarefas()
+        salvarLocalStorage()
+    }
+
 }
 
 //Adicionar o efeito de "tarefa completada"

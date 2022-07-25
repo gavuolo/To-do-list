@@ -31,6 +31,13 @@ function mostrarTarefa(){
 }
 
 //Adicionar tarefa
+let textoTarefa = document.querySelector('input')
+    textoTarefa.addEventListener("keypress", function(evento){
+       if(evento.keyCode === 13){
+        addTarefa()
+       }
+    })
+
 function addTarefa() {
     let novaTarefa = document.querySelector('input').value;
     let divAdd = document.querySelector('.all-list ul')
@@ -68,6 +75,7 @@ function completarTarefa(div){
 
 //Botão de completar todas as tarefas
 function completarTodos(){
+    
     let lista = document.querySelectorAll('.list')
     for(let i = 0; i < lista.length; i++){
         lista[i].classList.add('complete')
@@ -76,11 +84,15 @@ function completarTodos(){
 
 //Botão deletar todas as tarefas
 function deletarTodas(){
-    let lista = document.querySelectorAll('.list')
-    console.log(lista)
-    for(let i = 0; i < lista.length; i++){
-        lista[i].remove()
-        tarefas.pop([i])
-        salvarLocalStorage()
-    }
-}
+    
+    if(window.confirm("Você quer mesmo deletar todas as tarefas?")){
+        let lista = document.querySelectorAll('.list')
+        console.log(lista)
+        for(let i = 0; i < lista.length; i++){
+            lista[i].remove()
+            tarefas.pop([i])
+            salvarLocalStorage()
+        }
+
+    }   
+}  

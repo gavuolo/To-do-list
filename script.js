@@ -92,6 +92,7 @@ function deletarTodas(){
             lista[i].remove()
             tarefas.pop([i])
             salvarLocalStorage()
+            totalTarefas()
         }
 
     }   

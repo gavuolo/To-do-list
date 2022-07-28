@@ -27,6 +27,9 @@ h1{
     width: 35px;
     height: 35px;
 }
+.top-bar ion-icon:hover{
+    color: rgba(0, 0, 0, 0.2);
+}
 .bar{
     width: 100%;  
 }

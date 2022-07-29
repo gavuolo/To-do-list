@@ -180,8 +180,8 @@ input:focus{
     cursor: pointer;
 }
 .icons ion-icon{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 }
 
 .icons li:nth-child(1):hover{

@@ -78,7 +78,7 @@ function completarTodos(){
     
     let lista = document.querySelectorAll('.list')
     for(let i = 0; i < lista.length; i++){
-        lista[i].classList.add('complete')
+        lista[i].classList.toggle('complete')
     }
 }
 

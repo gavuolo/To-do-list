@@ -9,6 +9,9 @@ body{
 h1{
     font-weight: 700;
 }
+*{
+    box-sizing: border-box;
+}
 
 /**/
 .top-bar{
@@ -61,8 +64,9 @@ input{
 
 input:focus{
     box-sizing: border-box;
-    border: none;
-    border: transparent
+    border: 1px solid #535353;
+    box-shadow: none;
+    outline: none;
 }
 
 .add ion-icon{
@@ -87,7 +91,11 @@ input:focus{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    
+}
+
+@keyframes teste {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 .list{
@@ -103,6 +111,11 @@ input:focus{
     word-break: break-word;
     text-align: left;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.list:last-child{
+    animation-name: teste;
+    animation-duration: 1s;
 }
 
 .complete{

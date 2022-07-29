@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
 
+
 body{
+    height: 100%;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     background-color: #555568;
+    position: relative;
 }
 
 h1{
@@ -11,6 +14,10 @@ h1{
 }
 *{
     box-sizing: border-box;
+}
+a{
+    color: inherit;
+    text-decoration: none;
 }
 
 /**/
@@ -23,7 +30,7 @@ h1{
     justify-content: space-around;
     align-items: center;
     background-color:#a0a08b;
-    border-radius: 5px;  
+    border-radius: 5px;
 }
 .top-bar ion-icon{
     cursor: pointer;
@@ -32,9 +39,6 @@ h1{
 }
 .top-bar ion-icon:hover{
     color: rgba(0, 0, 0, 0.2);
-}
-.bar{
-    width: 100%;  
 }
 
 /**/
@@ -93,10 +97,7 @@ input:focus{
     flex-direction: column;
 }
 
-@keyframes teste {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
+
 
 .list{
     height: auto;
@@ -113,6 +114,10 @@ input:focus{
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
+@keyframes teste {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 .list:last-child{
     animation-name: teste;
     animation-duration: 1s;
@@ -130,17 +135,67 @@ input:focus{
     cursor: pointer;
 }
 
-.list ion-icon{
-    visibility: hidden;
-}
-
-.list:hover ion-icon{
-    visibility: visible;
-    padding: 1%;
+.list ion-icon:hover{
+    padding: 0;
     transition: width 2s;
     cursor: pointer;
+    color: rgba(0, 0, 0, 0.2);
 }
 
+/**/
+.info {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.icons{
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.icons ul{
+    display: flex;
+}
+.icons li{
+    border-radius: 100%;
+    color:#a0a08b;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.icons ion-icon{
+    width: 50px;
+    height: 50px;
+}
+
+.icons li:nth-child(1):hover{
+    background-color: #333333;
+    color:#ffffff;
+}
+.icons li:nth-child(2):hover{
+    background: #E4405F;
+    color: #ffffff;
+}
+.icons li:nth-child(3):hover{
+    background:#0077B5;
+    color: #ffffff;
+}
 /*breakpoint*/
 
 @media (max-width: 900px){

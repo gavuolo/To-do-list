@@ -43,8 +43,8 @@ function addTarefa() {
     let divAdd = document.querySelector('.all-list ul')
     if(novaTarefa != '' && novaTarefa != undefined){
         divAdd.innerHTML += `
-        <div class="list">
-            <li onclick="completarTarefa(this)">${novaTarefa}</li>
+        <div onclick="completarTarefa(this)" class="list">
+            <li>${novaTarefa}</li>
             <span><ion-icon onclick="deletarTarefa(this)" name="trash-outline"></ion-icon>
             </span>
         </div>
@@ -69,14 +69,14 @@ function deletarTarefa(div){
 
 //Adicionar o efeito de "tarefa completada"
 function completarTarefa(div){
-    div.parentNode.classList.toggle('complete')
+    div.classList.toggle('complete')
     salvarLocalStorage()
 }
 
 //Botão de completar todas as tarefas
 function completarTodos(){
     
-    let lista = document.querySelectorAll('.list')
+    let lista = document.querySelectorAll('div .list')
     for(let i = 0; i < lista.length; i++){
         lista[i].classList.toggle('complete')
     }
